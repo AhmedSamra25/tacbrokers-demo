@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     SITE BASE URL  —  https://ahmedsamra25.github.io/tacbrokers-demo/
+     ------------------------------------------------------------
+     Filled in for this deployment. If the repo is ever renamed or
+     moved, update every line tagged [BASE URL] below
+     (lines 21, 28, 31, 32 and 42 of this file).
+     Social previews break until those match the live URL.
+     These five values MUST be absolute URLs - scrapers ignore
+     relative paths. Every other path on this site is relative.
+     ============================================================ -->
+
+<!-- Primary -->
+<title>TacBrokers — One account to invest, save, get paid and pay</title>
+<meta name="description" content="Egypt's fintech for trading, gold, savings, gam3ia, payments and payroll. One app, eight services, Arabic and English.">
+<link rel="canonical" href="https://ahmedsamra25.github.io/tacbrokers-demo/"><!-- [BASE URL] -->
+
+<!-- Open Graph — WhatsApp, LinkedIn, Facebook, Slack -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TacBrokers">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_EG">
+<meta property="og:url" content="https://ahmedsamra25.github.io/tacbrokers-demo/"><!-- [BASE URL] -->
+<meta property="og:title" content="TacBrokers — One account to invest, save, get paid and pay">
+<meta property="og:description" content="Trading on the Egyptian Exchange, gold from half a gram, goal-based savings, digital gam3ia, payments and payroll. All in one app.">
+<meta property="og:image" content="https://ahmedsamra25.github.io/tacbrokers-demo/assets/og-image.png"><!-- [BASE URL] -->
+<meta property="og:image:secure_url" content="https://ahmedsamra25.github.io/tacbrokers-demo/assets/og-image.png"><!-- [BASE URL] -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="TacBrokers — one account to invest, save, get paid and pay">
+
+<!-- X / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TacBrokers — One account to invest, save, get paid and pay">
+<meta name="twitter:description" content="Trading, gold, savings, gam3ia, payments and payroll. One app, eight services.">
+<meta name="twitter:image" content="https://ahmedsamra25.github.io/tacbrokers-demo/assets/og-image.png"><!-- [BASE URL] -->
+<meta name="twitter:image:alt" content="TacBrokers">
+
+<meta name="theme-color" content="#003cd4">
+
+<!-- Icons and styles — all relative, required for GitHub Pages subpath hosting -->
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- Marks the page as scripted so the scroll-reveal never hides content
+     when JavaScript is off. Runs before first paint, so nothing flashes. -->
+<script>document.documentElement.classList.add('tb-js');</script>
+</head>
+
+<body>
+<!-- All page content lives inside .tb so resets never reach the chat widget iframe. -->
+<div class="tb">
+
+<a class="tb-skip" href="#main" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
+
+<!-- ─────────────────────────── header ─────────────────────────── -->
+<header class="tb-head" id="top">
+  <div class="tb-wrap tb-head__in">
+    <a class="tb-logo" href="#top" aria-label="TacBrokers — home">
+      <svg class="tb-logo__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path fill="currentColor" class="tb-logo__t" d="M13 18h20v6h-7v22h-6V24h-7z"/>
+        <g fill="currentColor" class="tb-logo__b">
+          <rect x="38" y="18" width="6" height="28"/>
+          <path fill-rule="evenodd" d="M38 18h5.5a7.5 7.5 0 0 1 0 15H38zm4 4h1.5a3.5 3.5 0 0 1 0 7H42z"/>
+          <path fill-rule="evenodd" d="M38 31h5.5a7.5 7.5 0 0 1 0 15H38zm4 4h1.5a3.5 3.5 0 0 1 0 7H42z"/>
+        </g>
+      </svg>
+      <span class="tb-logo__word"><span class="tb-logo__word-a">Tac</span><span class="tb-logo__word-b">Brokers</span></span>
+    </a>
+
+    <button class="tb-burger" type="button" aria-expanded="false" aria-controls="tb-nav" data-nav-toggle>
+      <span class="tb-burger__bars" aria-hidden="true"></span>
+      <span class="tb-sr" data-en="Menu" data-ar="القائمة">Menu</span>
+    </button>
+
+    <nav class="tb-nav" id="tb-nav" data-nav>
+      <ul class="tb-nav__list">
+        <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+        <li><a href="#how" data-en="How it works" data-ar="إزاي بيشتغل">How it works</a></li>
+        <li><a href="#security" data-en="Security" data-ar="الأمان">Security</a></li>
+        <li><a href="#support" data-en="Support" data-ar="الدعم">Support</a></li>
+      </ul>
+      <div class="tb-head__actions">
+        <button class="tb-lang" type="button" data-lang-toggle
+                data-en-aria="Switch the site to Arabic" data-ar-aria="Switch the site to English"
+                aria-label="Switch the site to Arabic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="tb-lang__globe">
+            <circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8M12 3.6c2.2 2.3 3.3 5.1 3.3 8.4s-1.1 6.1-3.3 8.4c-2.2-2.3-3.3-5.1-3.3-8.4S9.8 5.9 12 3.6z"/>
+          </svg>
+          <span data-lang-label lang="ar">العربية</span>
+        </button>
+        <a class="tb-btn tb-btn--solid tb-btn--sm" href="#support" data-en="Get the app" data-ar="حمّل التطبيق">Get the app</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ─────────────────────────── hero ─────────────────────────── -->
+  <section class="tb-hero">
+    <div class="tb-wrap tb-hero__in">
+      <div class="tb-hero__copy">
+        <p class="tb-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.2l7 2.6v5.4c0 4.3-2.9 7.9-7 9.6-4.1-1.7-7-5.3-7-9.6V5.8z"/><path d="M8.9 12.1l2.2 2.2 4-4.3"/></svg>
+          <span data-en="Licensed by the FRA and the Central Bank of Egypt"
+                data-ar="مرخّصة من الهيئة العامة للرقابة المالية والبنك المركزي المصري">Licensed by the FRA and the Central Bank of Egypt</span>
+        </p>
+
+        <h1 class="tb-hero__title"
+            data-en="One account to invest, save, get paid and pay."
+            data-ar="حساب واحد تستثمر وتدخر وتقبض وتدفع منه">One account to invest, save, get paid and pay.</h1>
+
+        <p class="tb-hero__lede"
+           data-en="Trading on the Egyptian Exchange, gold from half a gram, goal-based savings, digital gam3ia, payments and payroll — all from a single balance, in Arabic or English."
+           data-ar="تداول في البورصة المصرية، وذهب من نص جرام، وادخار بهدف، وجمعية رقمية، ومدفوعات ومرتبات — كله من رصيد واحد، بالعربي أو بالإنجليزي.">Trading on the Egyptian Exchange, gold from half a gram, goal-based savings, digital gam3ia, payments and payroll — all from a single balance, in Arabic or English.</p>
+
+        <div class="tb-hero__cta">
+          <a class="tb-btn tb-btn--solid" href="#support" data-en="Get the app" data-ar="حمّل التطبيق">Get the app</a>
+          <button class="tb-btn tb-btn--ghost" type="button" data-open-chat
+                  data-en="Ask the assistant" data-ar="اسأل المساعد">Ask the assistant</button>
+        </div>
+      </div>
+
+      <!-- one balance, four holdings: the product proposition, rendered -->
+      <aside class="tb-card" aria-label="Sample account">
+        <div class="tb-card__top">
+          <p class="tb-card__label" data-en="Total balance" data-ar="إجمالي الرصيد">Total balance</p>
+          <p class="tb-card__sum" data-en="EGP 48,250.00" data-ar="48,250.00 ج.م">EGP 48,250.00</p>
+        </div>
+
+        <div class="tb-bar" role="img"
+             data-en-aria="Allocation: trading 44%, gold 25%, savings 19%, gam3ia 12%"
+             data-ar-aria="التوزيع: بورصة 44%، ذهب 25%، ادخار 19%، جمعية 12%"
+             aria-label="Allocation: trading 44%, gold 25%, savings 19%, gam3ia 12%">
+          <i style="--w:44.3%"></i><i style="--w:24.9%"></i><i style="--w:19.4%"></i><i style="--w:11.4%"></i>
+        </div>
+
+        <ul class="tb-card__rows">
+          <li><span data-en="Trading" data-ar="البورصة">Trading</span><b data-en="EGP 21,400" data-ar="21,400 ج.م">EGP 21,400</b></li>
+          <li><span data-en="Gold" data-ar="الذهب">Gold</span><b data-en="EGP 12,000" data-ar="12,000 ج.م">EGP 12,000</b></li>
+          <li><span data-en="Savings" data-ar="الادخار">Savings</span><b data-en="EGP 9,350" data-ar="9,350 ج.م">EGP 9,350</b></li>
+          <li><span data-en="Gam3ia" data-ar="الجمعية">Gam3ia</span><b data-en="EGP 5,500" data-ar="5,500 ج.م">EGP 5,500</b></li>
+        </ul>
+
+        <p class="tb-card__note" data-en="Sample data — not a real account" data-ar="بيانات تجريبية — مش حساب حقيقي">Sample data — not a real account</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── stats ─────────────────────────── -->
+  <section class="tb-stats" aria-label="TacBrokers at a glance">
+    <div class="tb-wrap tb-stats__in">
+      <div class="tb-stat">
+        <p class="tb-stat__v">8</p>
+        <p class="tb-stat__k" data-en="services in one app" data-ar="خدمات في تطبيق واحد">services in one app</p>
+      </div>
+      <div class="tb-stat">
+        <p class="tb-stat__v">14</p>
+        <p class="tb-stat__k" data-en="governorates covered" data-ar="محافظة مغطّاة">governorates covered</p>
+      </div>
+      <div class="tb-stat">
+        <p class="tb-stat__v" data-en="AR / EN" data-ar="عربي / EN">AR / EN</p>
+        <p class="tb-stat__k" data-en="support in both languages" data-ar="دعم باللغتين">support in both languages</p>
+      </div>
+      <div class="tb-stat">
+        <p class="tb-stat__v">24/7</p>
+        <p class="tb-stat__k" data-en="AI assistance" data-ar="مساعدة ذكية">AI assistance</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── services ─────────────────────────── -->
+  <section class="tb-sec" id="services">
+    <div class="tb-wrap">
+      <header class="tb-sec__head tb-reveal">
+        <h2 data-en="Eight services, one balance" data-ar="ثماني خدمات ورصيد واحد">Eight services, one balance</h2>
+        <p data-en="Everything you would normally keep four apps and a bank branch for."
+           data-ar="كل اللي كنت محتاجله أربع تطبيقات وفرع بنك.">Everything you would normally keep four apps and a bank branch for.</p>
+      </header>
+
+      <div class="tb-grid tb-reveal">
+
+        <article class="tb-svc">
+          <span class="tb-svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><g fill="currentColor" stroke="none"><rect x="4" y="14" width="4" height="6" rx="1.2"/><rect x="10" y="10" width="4" height="10" rx="1.2"/><rect x="16" y="5" width="4" height="15" rx="1.2"/></g></svg>
+          </span>
+          <h3 data-en="Trading" data-ar="الاستثمار في البورصة">Trading</h3>
+          <p class="tb-svc__lede" data-en="Access to the Egyptian Exchange: equities, funds, treasury bills and IPOs."
+             data-ar="تداول في البورصة المصرية: أسهم وصناديق وأذون خزانة واكتتابات.">Access to the Egyptian Exchange: equities, funds, treasury bills and IPOs.</p>
+          <p data-en="Commission 0.15%, minimum EGP 15 per order. Start from EGP 1,000."
+             data-ar="العمولة 0.15% بحد أدنى 15 جنيه للأمر الواحد. ابدأ من 1,000 جنيه.">Commission 0.15%, minimum EGP 15 per order. Start from EGP 1,000.</p>
+        </article>
+
+        <article class="tb-svc">
+          <span class="tb-svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.4 10.3h9.2l2.3 6.4H5.1z"/><path d="M8.2 13.4h7.6"/></svg>
+          </span>
+          <h3 data-en="Gold Investments" data-ar="الاستثمار في الذهب">Gold Investments</h3>
+          <p class="tb-svc__lede" data-en="Buy 24-karat investment bullion from half a gram."
+             data-ar="اشترِ سبائك ذهب عيار 24 من نص جرام.">Buy 24-karat investment bullion from half a gram.</p>
+          <p data-en="Stored in an insured vault, independently audited, with physical delivery whenever you want it."
+             data-ar="محفوظة في خزنة مؤمَّنة وتتم مراجعتها من جهة مستقلة، وتقدر تستلمها ذهب فعلي في أي وقت.">Stored in an insured vault, independently audited, with physical delivery whenever you want it.</p>
+        </article>
+
+        <article class="tb-svc">
+          <span class="tb-svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="1.9" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <h3 data-en="Savings" data-ar="الادخار">Savings</h3>
+          <p class="tb-svc__lede" data-en="Goal-based saving into regulated money market and sukuk funds."
+             data-ar="ادخار بهدف في صناديق نقدية وصكوك خاضعة للرقابة.">Goal-based saving into regulated money market and sukuk funds.</p>
+          <p data-en="Start from EGP 100. Not a bank deposit."
+             data-ar="ابدأ من 100 جنيه. وده مش وديعة بنكية.">Start from EGP 100. Not a bank deposit.</p>
+        </article>
+
+        <article class="tb-svc">
+          <span class="tb-svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><g fill="currentColor" stroke="none"><circle cx="12" cy="6.9" r="2.4"/><circle cx="16.5" cy="9.4" r="1.75"/><circle cx="16.5" cy="14.6" r="1.75"/><circle cx="12" cy="17.1" r="1.75"/><circle cx="7.5" cy="14.6" r="1.75"/><circle cx="7.5" cy="9.4" r="1.75"/></g></svg>
+          </span>
+          <h3 data-en="Gam3ia" data-ar="الجمعية">Gam3ia</h3>
+          <p class="tb-svc__lede" data-en="The rotating savings circle you already trust, with every member vetted and your payout guaranteed even if someone stops paying."
+             data-ar="نفس الجمعية اللي واثق فيها، بس كل عضو متحقَّق منه ودورك مضمون حتى لو حد وقف دفع.">The rotating savings circle you already trust, with every member vetted and your payout guaranteed even if someone stops paying.</p>
+          <p data-en="EGP 500–10,000 monthly, circles of 6, 10 or 12."
+             data-ar="من 500 لـ 10,000 جنيه شهريًا، ودوائر من 6 أو 10 أو 12 عضو.">EGP 500–10,000 monthly, circles of 6, 10 or 12.</p>
+        </article>
+
+        <article class="tb-svc">
+          <span class="tb-svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7.3" y="5.6" width="9.4" height="12.8" rx="1.4"/><g fill="currentColor" stroke="none"><rect x="9.4" y="9" width="5.2" height="1.4" rx="0.7"/><rect x="9.4" y="12.6" width="3.4" height="1.4" rx="0.7"/></g></svg>
+          </span>
+          <h3 data-en="Online Payment" data-ar="المدفوعات الإلكترونية">Online Payment</h3>
+          <p class="tb-svc__lede" data-en="Bills, mobile top-ups, school fees, government services and instant transfers."
+             data-ar="فواتير وشحن موبايل ومصاريف مدارس وخدمات حكومية وتحويلات فورية.">Bills, mobile top-ups, school fees, government services and instant transfers.</p>
+          <p data-en="Bill payment EGP 3; transfers free."
+             data-ar="دفع الفاتورة بـ 3 جنيه، والتحويلات مجانية.">Bill payment EGP 3; transfers free.</p>
+        </article>
+
+        <article class="tb-svc">
+          <span class="tb-svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.7" y="7.7" width="14.6" height="9" rx="1.8"/><rect x="4.7" y="10" width="14.6" height="1.8" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <h3 data-en="Payment Gateways" data-ar="بوابات الدفع">Payment Gateways</h3>
+          <p class="tb-svc__lede" data-en="Accept cards, wallets, instant transfers, QR and cash from one integration."
+             data-ar="اقبل كروت ومحافظ وتحويلات فورية وكيو آر وكاش من تكامل واحد.">Accept cards, wallets, instant transfers, QR and cash from one integration.</p>
+          <p data-en="1.9% + EGP 2 on cards. Settlement in two working days."
+             data-ar="1.9% + 2 جنيه على الكروت. والتسوية خلال يومين عمل.">1.9% + EGP 2 on cards. Settlement in two working days.</p>
+        </article>
+
+        <article class="tb-svc">
+          <span class="tb-svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.7" y="7.3" width="14.6" height="9.4" rx="2.2"/><circle cx="15.6" cy="12.2" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <h3 data-en="Wallet Charges" data-ar="شحن المحفظة">Wallet Charges</h3>
+          <p class="tb-svc__lede" data-en="Cash in at any agent point with a reference code, or top up by card or instant transfer."
+             data-ar="اشحن كاش من أي منفذ بكود مرجعي، أو بكارت أو تحويل فوري.">Cash in at any agent point with a reference code, or top up by card or instant transfer.</p>
+          <p data-en="No bank account needed." data-ar="من غير ما تحتاج حساب بنكي.">No bank account needed.</p>
+        </article>
+
+        <article class="tb-svc">
+          <span class="tb-svc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.1" r="2.6"/><path d="M6.4 17.6a5.6 5.6 0 0 1 11.2 0"/></svg>
+          </span>
+          <h3 data-en="Easy Payroll" data-ar="صرف المرتبات">Easy Payroll</h3>
+          <p class="tb-svc__lede" data-en="Pay your whole team electronically in one run, including staff with no bank account."
+             data-ar="اصرف مرتبات فريقك كله إلكترونيًا في مرة واحدة، حتى اللي معندهمش حساب بنكي.">Pay your whole team electronically in one run, including staff with no bank account.</p>
+          <p data-en="EGP 15 per employee per month." data-ar="15 جنيه للموظف في الشهر.">EGP 15 per employee per month.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── how it works ─────────────────────────── -->
+  <section class="tb-sec tb-sec--tint" id="how">
+    <div class="tb-wrap">
+      <header class="tb-sec__head tb-reveal">
+        <h2 data-en="Three steps to your first transaction" data-ar="تلات خطوات لأول معاملة">Three steps to your first transaction</h2>
+        <p data-en="Opening an account takes a few minutes and happens entirely in the app."
+           data-ar="فتح الحساب بياخد دقايق وبيتم كله من التطبيق.">Opening an account takes a few minutes and happens entirely in the app.</p>
+      </header>
+
+      <ol class="tb-steps tb-reveal">
+        <li class="tb-step">
+          <span class="tb-step__n" aria-hidden="true">1</span>
+          <h3 data-en="Download and verify with your national ID" data-ar="حمّل التطبيق واتحقق ببطاقتك الشخصية">Download and verify with your national ID</h3>
+          <p data-en="You will need your national ID and a selfie. Verification is usually done the same day."
+             data-ar="هتحتاج بطاقة الرقم القومي وصورة سيلفي. التحقق غالبًا بيخلص في نفس اليوم.">You will need your national ID and a selfie. Verification is usually done the same day.</p>
+        </li>
+        <li class="tb-step">
+          <span class="tb-step__n" aria-hidden="true">2</span>
+          <h3 data-en="Add money by cash, card or transfer" data-ar="اشحن كاش أو بكارت أو بتحويل">Add money by cash, card or transfer</h3>
+          <p data-en="Cash in at any agent point with a reference code, or move money from any Egyptian bank."
+             data-ar="اشحن كاش من أي منفذ بكود مرجعي، أو حوّل من أي بنك مصري.">Cash in at any agent point with a reference code, or move money from any Egyptian bank.</p>
+        </li>
+        <li class="tb-step">
+          <span class="tb-step__n" aria-hidden="true">3</span>
+          <h3 data-en="Invest, save or pay from one balance" data-ar="استثمر أو ادخر أو ادفع من رصيد واحد">Invest, save or pay from one balance</h3>
+          <p data-en="Buy shares or gold, start a gam3ia, settle a bill or run payroll — without moving money between apps."
+             data-ar="اشترِ أسهم أو ذهب، ابدأ جمعية، ادفع فاتورة أو اصرف مرتبات — من غير ما تنقل فلوس بين التطبيقات.">Buy shares or gold, start a gam3ia, settle a bill or run payroll — without moving money between apps.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── security ─────────────────────────── -->
+  <section class="tb-safe" id="security">
+    <div class="tb-wrap">
+      <header class="tb-sec__head tb-sec__head--dark tb-reveal">
+        <h2 data-en="How your money is kept safe" data-ar="فلوسك محمية إزاي">How your money is kept safe</h2>
+        <p data-en="What happens to your money while it sits with us, and what we will never ask you for."
+           data-ar="فلوسك بتتحفظ إزاي وهي عندنا، وإيه اللي عمرنا ما هنطلبه منك.">What happens to your money while it sits with us, and what we will never ask you for.</p>
+      </header>
+
+      <ul class="tb-safe__list tb-reveal">
+        <li>
+          <span class="tb-safe__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="6.6" width="7" height="10.8" rx="1.6"/><rect x="13.4" y="6.6" width="7" height="10.8" rx="1.6"/></svg>
+          </span>
+          <h3 data-en="Money held separately from company funds" data-ar="فلوسك محفوظة منفصلة عن أموال الشركة">Money held separately from company funds</h3>
+          <p data-en="Client balances sit in segregated accounts and are never used to run the business."
+             data-ar="أرصدة العملاء في حسابات منفصلة وما بتستخدمش في تشغيل الشركة أبدًا.">Client balances sit in segregated accounts and are never used to run the business.</p>
+        </li>
+        <li>
+          <span class="tb-safe__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7 2.6v5.4c0 4.3-2.9 7.9-7 9.6-4.1-1.7-7-5.3-7-9.6V5.8z"/><path d="M9 12.2h6"/></svg>
+          </span>
+          <h3 data-en="We never ask for your PIN or OTP" data-ar="عمرنا ما بنطلب الرقم السري أو كود التفعيل">We never ask for your PIN or OTP</h3>
+          <p data-en="Not by phone, not by message, not in chat. Anyone who asks for them is not us."
+             data-ar="لا بالتليفون ولا برسالة ولا في الشات. وأي حد بيطلبهم مش احنا.">Not by phone, not by message, not in chat. Anyone who asks for them is not us.</p>
+        </li>
+        <li>
+          <span class="tb-safe__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.4 3.8h8.4l4 4v12.4H6.4z"/><path d="M14.8 3.8v4h4"/><path d="M9.6 15h6"/></svg>
+          </span>
+          <h3 data-en="Licensed and regulated" data-ar="مرخّصة وخاضعة للرقابة">Licensed and regulated</h3>
+          <p data-en="Brokerage and fintech licences from the FRA, and payment facilitator status with the Central Bank of Egypt."
+             data-ar="تراخيص وساطة وتكنولوجيا مالية من الهيئة العامة للرقابة المالية، وتسجيل كميسّر مدفوعات لدى البنك المركزي المصري.">Brokerage and fintech licences from the FRA, and payment facilitator status with the Central Bank of Egypt.</p>
+        </li>
+        <li>
+          <span class="tb-safe__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5.4" width="16" height="11.4" rx="3"/><path d="M9 16.8l-.3 3.4 3.9-3.4"/></svg>
+          </span>
+          <h3 data-en="Arabic and English support" data-ar="دعم بالعربي والإنجليزي">Arabic and English support</h3>
+          <p data-en="Reach a person or the assistant in either language, on chat or on 16123, at any hour."
+             data-ar="اوصل لموظف أو للمساعد بأي لغة، على الشات أو على 16123، في أي وقت.">Reach a person or the assistant in either language, on chat or on 16123, at any hour.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── support ─────────────────────────── -->
+  <section class="tb-sec tb-sec--cta" id="support">
+    <div class="tb-wrap tb-cta tb-reveal">
+      <div class="tb-cta__copy">
+        <h2 data-en="Have a question? Ask the assistant." data-ar="عندك سؤال؟ اسأل المساعد.">Have a question? Ask the assistant.</h2>
+        <p data-en="It answers on commissions, gold delivery, gam3ia rules, settlement times and payroll runs — in Arabic or English, at any hour."
+           data-ar="بيجاوب على العمولات، واستلام الذهب، وقواعد الجمعية، ومواعيد التسوية، وصرف المرتبات — بالعربي أو بالإنجليزي، في أي وقت.">It answers on commissions, gold delivery, gam3ia rules, settlement times and payroll runs — in Arabic or English, at any hour.</p>
+      </div>
+      <div class="tb-cta__act">
+        <button class="tb-btn tb-btn--solid" type="button" data-open-chat data-en="Start a chat" data-ar="ابدأ محادثة">Start a chat</button>
+        <p class="tb-cta__tel">
+          <span data-en="Or call the hotline" data-ar="أو اتصل بالخط الساخن">Or call the hotline</span>
+          <a href="tel:16123">16123</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ─────────────────────────── footer ─────────────────────────── -->
+<footer class="tb-foot">
+  <div class="tb-wrap">
+    <div class="tb-foot__top">
+      <div class="tb-foot__brand">
+        <a class="tb-logo tb-logo--light" href="#top" aria-label="TacBrokers — home">
+          <svg class="tb-logo__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <path fill="currentColor" class="tb-logo__t" d="M13 18h20v6h-7v22h-6V24h-7z"/>
+            <g fill="currentColor" class="tb-logo__b">
+              <rect x="38" y="18" width="6" height="28"/>
+              <path fill-rule="evenodd" d="M38 18h5.5a7.5 7.5 0 0 1 0 15H38zm4 4h1.5a3.5 3.5 0 0 1 0 7H42z"/>
+              <path fill-rule="evenodd" d="M38 31h5.5a7.5 7.5 0 0 1 0 15H38zm4 4h1.5a3.5 3.5 0 0 1 0 7H42z"/>
+            </g>
+          </svg>
+          <span class="tb-logo__word"><span class="tb-logo__word-a">Tac</span><span class="tb-logo__word-b">Brokers</span></span>
+        </a>
+        <p class="tb-foot__tag" data-en="One account to invest, save, get paid and pay."
+           data-ar="حساب واحد تستثمر وتدخر وتقبض وتدفع منه">One account to invest, save, get paid and pay.</p>
+
+        <div class="tb-sub">
+          <label class="tb-sub__label" for="tb-email" data-en="Product updates" data-ar="أخبار المنتج">Product updates</label>
+          <div class="tb-sub__row">
+            <input id="tb-email" type="email" autocomplete="off" disabled
+                   data-en-placeholder="you@example.com" data-ar-placeholder="you@example.com"
+                   placeholder="you@example.com">
+            <button type="button" disabled data-en="Subscribe" data-ar="اشترك">Subscribe</button>
+          </div>
+          <p class="tb-sub__note" data-en="Not connected — this demo site has no backend."
+             data-ar="غير مفعّل — الموقع التجريبي ده من غير سيرفر.">Not connected — this demo site has no backend.</p>
+        </div>
+      </div>
+
+      <nav class="tb-foot__nav" aria-label="Footer">
+        <div>
+          <h2 data-en="Services" data-ar="الخدمات">Services</h2>
+          <ul>
+            <li><a href="#services" data-en="Trading" data-ar="الاستثمار في البورصة">Trading</a></li>
+            <li><a href="#services" data-en="Gold Investments" data-ar="الاستثمار في الذهب">Gold Investments</a></li>
+            <li><a href="#services" data-en="Savings" data-ar="الادخار">Savings</a></li>
+            <li><a href="#services" data-en="Gam3ia" data-ar="الجمعية">Gam3ia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 data-en="Business" data-ar="للشركات">Business</h2>
+          <ul>
+            <li><a href="#services" data-en="Online Payment" data-ar="المدفوعات الإلكترونية">Online Payment</a></li>
+            <li><a href="#services" data-en="Payment Gateways" data-ar="بوابات الدفع">Payment Gateways</a></li>
+            <li><a href="#services" data-en="Wallet Charges" data-ar="شحن المحفظة">Wallet Charges</a></li>
+            <li><a href="#services" data-en="Easy Payroll" data-ar="صرف المرتبات">Easy Payroll</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 data-en="Contact" data-ar="تواصل معنا">Contact</h2>
+          <ul>
+            <li><a href="tel:16123" data-en="Hotline 16123" data-ar="الخط الساخن 16123">Hotline 16123</a></li>
+            <li><a href="mailto:support@tacbrokers.com">support@tacbrokers.com</a></li>
+            <li><span data-en="12 Street 250, Degla, Maadi, Cairo" data-ar="12 شارع 250، دجلة، المعادي، القاهرة">12 Street 250, Degla, Maadi, Cairo</span></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Bottom padding here keeps the chat widget launcher clear. See README. -->
+    <div class="tb-foot__legal">
+      <p class="tb-foot__lic" data-en="FRA Securities Brokerage 742/2023 · FRA Fintech 219/2023 · CBE Payment Facilitator PF-118/2024"
+         data-ar="وساطة في الأوراق المالية 742/2023 · تكنولوجيا مالية 219/2023 · ميسّر مدفوعات PF-118/2024">FRA Securities Brokerage 742/2023 · FRA Fintech 219/2023 · CBE Payment Facilitator PF-118/2024</p>
+      <p class="tb-foot__disc"
+         data-en="Demonstration site. TacBrokers is not a real company — every figure, licence number, address and phone number on this page is invented sample data, and nothing here is an offer of financial services."
+         data-ar="موقع تجريبي. تاك بروكرز شركة غير حقيقية — كل الأرقام وأرقام التراخيص والعناوين وأرقام التليفونات في الصفحة دي بيانات تجريبية متخيّلة، ومفيش حاجة هنا تُعتبر عرضًا لخدمات مالية.">Demonstration site. TacBrokers is not a real company — every figure, licence number, address and phone number on this page is invented sample data, and nothing here is an offer of financial services.</p>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.tb -->
+
+<script src="assets/script.js"></script>
+
+<!-- ============================================
+     AI CHAT WIDGET — paste the Tactful embed snippet here
+     ============================================ -->
+
+</body>
+</html>

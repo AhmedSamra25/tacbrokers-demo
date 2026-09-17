@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TacBrokers">
+  <title>TacBrokers</title>
+  <defs>
+    <linearGradient id="tb" x1="0" y1="0" x2="1" y2="0.34">
+      <stop offset="0" stop-color="#001541"/>
+      <stop offset="0.45" stop-color="#0033b8"/>
+      <stop offset="1" stop-color="#0068fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#tb)"/>
+  <path fill="#ffffff" d="M13 18h20v6h-7v22h-6V24h-7z"/>
+  <g fill="#8fbcff">
+    <rect x="38" y="18" width="6" height="28"/>
+    <path fill-rule="evenodd" d="M38 18h5.5a7.5 7.5 0 0 1 0 15H38zm4 4h1.5a3.5 3.5 0 0 1 0 7H42z"/>
+    <path fill-rule="evenodd" d="M38 31h5.5a7.5 7.5 0 0 1 0 15H38zm4 4h1.5a3.5 3.5 0 0 1 0 7H42z"/>
+  </g>
+</svg>
