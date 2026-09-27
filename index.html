@@ -457,8 +457,23 @@
 <script src="assets/script.js"></script>
 
 <!-- ============================================
-     AI CHAT WIDGET — paste the Tactful embed snippet here
+     AI CHAT WIDGET — Tactful embed
+     profileId and token identify the webchat profile. Both are
+     client-side values, visible in this page's source by design.
+     To point the widget at a different profile, change them here.
      ============================================ -->
+<div id="embedded_messenger">
+  <div id="widget-launcher"></div>
+  <iframe id="tactful_client" title="TacBrokers chat assistant"
+          src="https://webchat.tactful.ai/webchat/chatChannel.html"></iframe>
+</div>
+<script src="https://webchat.tactful.ai/webchat/embed/embed.js"></script>
+<link rel="stylesheet" href="https://webchat.tactful.ai/webchat/css/embed.css" />
+<script>
+  var profileId = "1103";
+  var token = "bbc3726460b089214738560d03ab933af0bab13d948ae8f54525a1b03ea5db58";
+  Tactful.start({ profileId: profileId, token: token });
+</script>
 
 </body>
 </html>

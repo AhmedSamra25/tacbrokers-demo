@@ -136,8 +136,9 @@
 
   /* --------------------------------------------- chat widget ---
      Buttons marked data-open-chat ask the AI widget to open.
-     The widget snippet can listen for the event below, or expose
-     an open() method, or simply render its own launcher.        */
+     The Tactful embed exposes window.Tactful.toggle() and renders
+     its launcher inside #widget-launcher; both are handled below.
+     A different widget can hook the event instead.              */
   function openChat() {
     var ev;
     try {
@@ -149,11 +150,15 @@
     document.dispatchEvent(ev);
     if (ev.defaultPrevented) { return; }
 
-    var api = window.TactfulChat || window.Tactful || window.tactful;
-    if (api && typeof api.open === 'function') { api.open(); return; }
+    var api = window.Tactful || window.TactfulChat || window.tactful;
+    var fn = api && (api.open || api.toggle);
+    if (typeof fn === 'function') {
+      try { fn.call(api); return; } catch (err) { /* fall through */ }
+    }
 
     var launcher = document.querySelector(
-      '[data-tactful-launcher], #tactful-launcher, .tactful-launcher'
+      '#widget-launcher button, [data-tactful-launcher],' +
+      ' #tactful-launcher, .tactful-launcher'
     );
     if (launcher) { launcher.click(); return; }
 

@@ -140,41 +140,71 @@ Commit the regenerated PNGs — Pages serves the repo as-is and never runs the s
 
 ---
 
-## 5. The chat widget slot
+## 5. The chat widget
 
-Paste the Tactful embed snippet at the marked insertion point at the bottom of
-`index.html`, just before `</body>` (**lines 459–461**):
+The Tactful webchat embed is **installed**, at the bottom of `index.html` just before
+`</body>` (**lines 459–476**). It loads three things from `webchat.tactful.ai`:
+`embed.js`, `css/embed.css` and the `chatChannel.html` iframe.
 
 ```html
-<!-- ============================================
-     AI CHAT WIDGET — paste the Tactful embed snippet here
-     ============================================ -->
+<div id="embedded_messenger">
+  <div id="widget-launcher"></div>
+  <iframe id="tactful_client" title="TacBrokers chat assistant"
+          src="https://webchat.tactful.ai/webchat/chatChannel.html"></iframe>
+</div>
+<script src="https://webchat.tactful.ai/webchat/embed/embed.js"></script>
+<link rel="stylesheet" href="https://webchat.tactful.ai/webchat/css/embed.css" />
+<script>
+  var profileId = "1103";
+  var token = "…";
+  Tactful.start({ profileId: profileId, token: token });
+</script>
 ```
 
-The page is built around that launcher. Keep these constraints when editing:
+**To point it at a different profile**, change `profileId` and `token` on lines 473–474.
+Both are client-side values: they ship in the page source and are visible to anyone who
+views it, which is how every embedded chat widget works. Treat the token as a public
+profile identifier, not a secret — if it is ever rotated in the Tactful console, update
+it here and push.
 
-- **Nothing may occupy the bottom-right corner.** No back-to-top button, no cookie
-  banner, no floating CTA. Roughly 130×130px is kept clear there — the footer's legal
-  block carries the padding that reserves it (`.tb-foot__legal` in `assets/style.css`).
-- **Keep every page `z-index` under 1000.** The highest one used is 120 (the skip link);
-  the sticky header is 50. The widget renders at 999999.
+The element ids matter — `embed.js` looks up `#widget-launcher` and `#tactful_client` by
+name and logs an error if either is missing. Don't rename them.
+
+**The widget will not load in an automated browser.** `embed.js` checks for
+`navigator.webdriver` and for `HeadlessChrome`/`Playwright`/`Puppeteer` in the user agent
+and bails out with *"Automated environment detected"*. Headless screenshot tooling will
+show the page with no launcher — that is the widget working as designed, not a bug. Test
+it in a normal browser window.
+
+### Constraints the page holds to
+
+- **Nothing else may occupy the bottom-right corner.** No back-to-top button, no cookie
+  banner, no floating CTA. The launcher sits 55px from the right and 40px from the
+  bottom; `.tb-foot__legal` in `assets/style.css` reserves 150px of right padding and
+  104px of bottom padding so footer text never runs under it. It stays bottom-right in
+  Arabic too, so that reservation is physical `padding-right`, not a logical property.
+- **Keep every page `z-index` under 1000.** The highest the page uses is 120 (the skip
+  link); the sticky header is 50. The widget renders far above that.
 - **Resets are scoped.** All page content lives inside `<div class="tb">`, and every reset
-  is written as `.tb :where(…)`, so nothing cascades into the widget's injected iframe.
-- The site is designed to look finished with the slot empty — you can show it before the
-  widget is wired up.
+  is written as `.tb :where(…)`, so nothing cascades into the widget.
+- The widget is hidden in print (`@media print` in `assets/style.css`).
 
 ### Opening the widget from the page
 
 Two buttons carry `data-open-chat`: the hero's *Ask the assistant* and the support
-section's *Start a chat*. When clicked, `assets/script.js` tries, in order:
+section's *Start a chat*. When clicked, `openChat()` in `assets/script.js` tries, in order:
 
 1. dispatches `tacbrokers:open-chat` on `document` — call `preventDefault()` on the event
-   to signal the widget handled it;
-2. `window.TactfulChat.open()` / `window.Tactful.open()` / `window.tactful.open()`;
-3. clicks `[data-tactful-launcher]`, `#tactful-launcher` or `.tactful-launcher`;
+   to signal that something else handled it;
+2. `window.Tactful.open()` if it exists, otherwise **`window.Tactful.toggle()`** — the
+   method the embed actually exposes, and the one its own launcher button calls;
+3. clicks the rendered launcher (`#widget-launcher button`) or a
+   `[data-tactful-launcher]` / `#tactful-launcher` / `.tactful-launcher` element;
 4. falls back to scrolling to the support section.
 
-Adjust step 2 or 3 in `openChat()` to match the real embed's API, or listen for the event:
+Since the embed offers `toggle()` rather than `open()`, clicking one of these buttons
+while the chat is already open will close it. To swap in a different widget entirely,
+either adjust steps 2–3 or just listen for the event:
 
 ```js
 document.addEventListener('tacbrokers:open-chat', function (e) {
@@ -194,13 +224,15 @@ document.addEventListener('tacbrokers:open-chat', function (e) {
   `<html lang>` and `<html dir>`, and one CSS custom-property swap moves the whole page
   onto IBM Plex Sans Arabic. Layout mirrors through CSS logical properties; the three
   gradients are mirrored by hand, since gradients carry direction.
-- **Fonts.** One Google Fonts request for Manrope, Inter and IBM Plex Sans Arabic. That
-  stylesheet is the only third-party resource on the page — no analytics, no trackers.
+- **Fonts.** One Google Fonts request for Manrope, Inter and IBM Plex Sans Arabic.
+- **Third-party resources** are exactly two: that font stylesheet, and the Tactful webchat
+  embed in §5. No analytics, no trackers, no tag manager.
 - **The newsletter field is inert.** Input and button are both `disabled`, with a visible
   note saying so. There is no backend and no form submission anywhere on the site.
 - **Motion.** One scroll reveal driven by `IntersectionObserver`, switched off under
   `prefers-reduced-motion: reduce` along with smooth scrolling.
-- **Weight.** About 150 KB total including the OG image, excluding fonts.
+- **Weight.** About 150 KB of first-party assets including the OG image, excluding fonts
+  and the chat widget.
 
 ## Local preview
 

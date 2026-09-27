@@ -549,4 +549,5 @@ body{ margin:0; background:#fff; }
 
 @media print{
   .tb-head, .tb-hero__cta, .tb-cta__act{ display:none; }
+  #embedded_messenger{ display:none !important; }   /* chat widget */
 }
